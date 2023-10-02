@@ -1,0 +1,256 @@
+/* RESOLUTION: 1920x1080 */
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+html {
+  font-family: "Open Sans";
+  font-size: 12pt;
+}
+
+/* HEADER SECTION */
+
+header {
+  width: calc(var(--vw, 1vw) * 100);
+  position: absolute;
+  z-index: 1;
+}
+
+.topstripe {
+  position: absolute;
+  width: calc(var(--vw, 1vw) * 100);
+  height: 1.5rem;
+  direction: rtl;
+}
+
+.topstripe li {
+  display: inline;
+  margin-right: 2rem;
+}
+
+.topstripe li a {
+  color: #FFF;
+  text-decoration: none;
+}
+
+.menu {
+  text-align: center;
+  color: #FFF;
+}
+
+.navLeft {
+  display: table;
+  position: absolute;
+  top: 4rem;
+  right: calc(50% + 6rem);
+}
+
+.navLeft li ul {
+  position: absolute;
+  left: 0;
+  padding: inherit;
+}
+
+.navRight {
+  display: table;
+  position: absolute;
+  top: 4.5rem;
+  left: calc(50% + 6rem);
+}
+
+.navLeft li, .navRight li {
+  position: relative;
+  display: table-cell;
+  vertical-align: middle;
+  padding: 0 2rem;
+}
+
+.navLeft li ul li, .navRight li ul li {
+  display: block;
+  padding: 1.5rem 0;
+}
+
+.navCenter {
+  display: inline-block;
+  width: 8rem;
+  height: 8rem;
+}
+
+.navCenter img {
+  width: 6rem;
+  height: 6rem;
+}
+
+/* HEADPAGE */
+
+.headpage {
+  background-image: url(sectionimage/background.jpg);
+  background-color: rgb(172, 141, 94);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center 56%;
+  width: calc(var(--vw, 1vw) * 100);
+  height: calc(var(--vh, 1vh) * 100);
+  max-height: calc(var(--vh, 1vh) * 100);
+  overflow: hidden;
+}
+
+.aktualnosci {
+  position: absolute;
+  top: 45rem;
+  right: 60rem;
+  bottom: 5rem;
+  left: 12.5rem;
+  min-width: 42.5rem;
+  background-color: rgba(255, 235, 205, 0.7);
+  background-size: cover;
+  padding: 2.5rem;
+  overflow: hidden;
+}
+
+/* THE END|HEADPAGE */
+
+/* HEADPAGE [ANIMATION] */
+
+header input, .headpage input {
+  display: none;
+}
+
+.menu label,
+.aktualnosci,
+.aktualnosci input,
+.aktualnosci label,
+ main .select input {
+  cursor: pointer;
+}
+
+.navLeft li ul,
+.navRight li ul {
+  max-height: 0;
+  overflow: hidden;
+}
+
+.navLeft input:checked + label + ul,
+.navRight input:checked + label + ul {
+  max-height: calc(var(--vh, 1vh) * 50);
+  transition: all 1s ease;
+}
+
+.headpage input:checked + label .aktualnosci {
+  top: 10.2rem;
+}
+
+.aktualnosci {
+  transition: all 0.5s ease;
+}
+
+/* THE END|HEADPAGE [ANIMATION] */
+
+/* THE END | HEADER SECTION */
+
+.stripe {
+  width: calc(var(--vw, 1vw) * 100);
+  height: 7.5rem;
+  background-color: rgb(151, 202, 10);
+}
+
+/* MAIN */
+
+main {
+  width: calc(var(--vw, 1vw) * 100);
+  min-height: calc(var(--vh, 1vh) * 100);
+  background-color: burlywood;
+  background-size: cover;
+  padding: 2rem 0;
+}
+
+main .sections {
+  max-width: 78rem;
+  text-align: center;
+  margin: auto;
+}
+
+main .select {
+  display: inline-block;
+  margin-top: 1.9rem;
+  margin-bottom: 2.5rem;
+  margin-left: 1rem;
+  margin-right: 1rem;
+  vertical-align: top;
+  width: 23.75rem;
+}
+
+.select h2, .select p {
+  word-wrap: break-word;
+  padding-top: 1rem;
+  text-align: left;
+}
+
+main .select input {
+  margin-top: 2rem;
+  width: 7rem;
+  height: 3.2rem;
+  border-radius: 16rem;
+  font-size: 1rem;
+  font-weight: 400;
+  text-transform: uppercase;
+  vertical-align: bottom;
+  float: right;
+}
+
+.background2 {
+  background-image: url(sectionimage/Tymowa\ \(4\).jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  height: calc(var(--vh, 1vh) * 80);
+}
+
+/* IDK what to do with this footer */
+
+footer {
+  width: calc(var(--vw, 1vw) * 100);
+  height: auto;
+  background-color: blanchedalmond;
+  background-size: cover;
+  padding: 2rem 0;
+}
+
+footer .sections {
+  max-width: 78rem;
+  margin: auto;
+}
+
+
+footer .footerinfo {
+  display: inline-block;
+  width: 23.75rem;
+  margin-top: 1.9rem;
+  margin-bottom: 2.5rem;
+  margin-left: 1rem;
+  margin-right: 1rem;
+  padding: 0 1rem;
+  vertical-align: top;
+  text-align: left;
+}
+
+.footerinfo p, footer h2, footer h3 {
+  word-wrap: break-word;
+}
+
+.footerinfo img {
+  height: 5rem;
+  width: 15rem;
+}
+
+.bottomstripe {
+  padding: 1rem 0;
+  background-color: black;
+  background-size: cover;
+  color: #FFF;
+}
+

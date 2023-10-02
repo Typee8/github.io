@@ -1,0 +1,224 @@
+/* RESOLUTION: 1920x1080 */
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+html {
+  font-family: "Open Sans";
+  font-size: 12pt;
+}
+
+/* HEADER SECTION */
+
+header {
+  display: block;
+  width: calc(var(--vw, 1vw) * 100);
+  position: absolute;
+  z-index: 1;
+  color: #FFF;
+}
+
+.topstripe {
+  display: block;
+  position: absolute;
+  width: calc(var(--vw, 1vw) * 100);
+  height: 1.5rem;
+  direction: rtl;
+}
+
+.topstripe li {
+  display: inline;
+  margin-right: 2rem;
+}
+
+.topstripe li a {
+  text-decoration: none;
+  color: #FFF;
+}
+
+.menu {
+  display: block;
+  position: relative;
+  background: none;
+  text-align: center;
+  margin: auto;
+}
+
+.navLeft {
+  position: absolute;
+  top: 2.8rem;
+  right: calc(50% + 6rem);
+  display: table;
+}
+
+.navLeft li {
+  display: table-cell;
+  padding-left: 2rem;
+  padding-right: 2rem;
+}
+
+.navLeft li ul li {
+  display: block;
+  padding: 1.5rem 0 0 0;
+}
+
+.navCenter {
+  display: inline-block; 
+}
+
+.navRight {
+  position: absolute;
+  top: 2.8rem;
+  left: calc(50% + 6rem);
+  display: table;
+}
+
+.navRight li {
+  display: table-cell;
+  padding-left: 2rem;
+  padding-right: 2rem;
+}
+
+.navRight li ul li {
+  display: block;
+  padding: 1.5rem 0 0 0;
+}
+
+/* HEADER/ANIMATION */
+
+header input, .headpage input{
+  display: none;
+}
+
+.menu, .menu label, .news, .news input, .news label, main .selectsection input {
+  cursor: pointer;
+}
+
+.navLeft li ul, .navRight li ul {
+  max-height: 0;
+  overflow: hidden;
+}
+
+.navLeft input:checked + label + ul,.navRight input:checked + label + ul {
+  max-height: calc(var(--vh, 1vh) * 50);
+}
+
+.headpage input:checked + label .news{
+  top: 8rem;
+}
+
+/* THE END | HEADER/ANIMATION */
+
+/* THE END | HEADER SECTION */
+
+.headpage {
+  display: block;
+  background-color: rgb(172, 141, 94);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  position: relative;
+  width: calc(var(--vw, 1vw) * 100);
+  height: calc(var(--vh, 1vh) * 100);
+  max-height: calc(var(--vh, 1vh) * 100);
+  overflow: hidden;
+}
+
+.news {
+  position: absolute;
+  top: 45rem;
+  right: 60rem;
+  bottom: 5rem;
+  left: 12.5rem;
+  min-width: 42.5rem;
+  background-color: blanchedalmond;
+  background-size: cover;
+  padding: 2.5rem;
+  overflow: hidden;
+}
+
+.stripe {
+  display: block;
+  width: calc(var(--vw, 1vw) * 100);
+  height: 7.5rem;
+  background-color: rgb(194, 145, 9);
+}
+
+/* THE END OF HEADPAGE */
+
+main {
+  display: block;
+  width: calc(var(--vw, 1vw) * 100);
+  min-height: calc(var(--vh, 1vh) * 100);
+  height: auto;
+  background-color: burlywood;
+  background-size: cover;
+  padding: 2rem 0;
+  vertical-align: middle;
+}
+
+main .sections {
+  display: block;
+  max-width: 78rem;
+  text-align: center;
+  margin: auto;
+}
+
+main .selectsection {
+  display: inline-block;
+  position: relative;
+  margin-top: 1.9rem;
+  margin-bottom: 2.5rem;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  vertical-align: top;
+  width: 25.75rem; /* with padding */
+}
+
+.selectsection h2, .selectsection p {
+  word-wrap: break-word;
+  padding-top: 1rem;
+  text-align: left;
+}
+
+main .selectsection input {
+  margin-top: 2rem;
+  width: 7rem;
+  height: 3.2rem;
+  border-radius: 16rem;
+  font-size: 1rem;
+  font-weight: 400;
+  text-transform: uppercase;
+  vertical-align: bottom;
+  float: right;
+}
+
+.background2 {
+  display: block;
+  width: calc(var(--vw, 1vw) * 100);
+  height: 54rem;
+}
+
+footer {
+  display: inline-block;
+  width: calc(var(--vw, 1vw) * 100);
+  height: auto;
+  background-color: blanchedalmond;
+}
+
+.footer {
+  display: flex;
+  justify-content: center;
+  margin: 2rem 23.5rem;
+}
+
+.footer .footerinfo {
+  flex-wrap: wrap;
+  margin-right: 1.9rem;
+  margin-bottom: 1rem;
+
+}
